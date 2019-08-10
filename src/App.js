@@ -20,7 +20,7 @@ class App extends Component {
     const country = e.target.elements.country.value;
 
     const api_call = await fetch(
-      `https://crossorigin.me/http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${API_KEY}`
+      `http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${API_KEY}`
     );
     const data = await api_call.json();
     if (city && country) {
